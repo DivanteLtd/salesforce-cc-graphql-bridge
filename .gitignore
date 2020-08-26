@@ -1,0 +1,17 @@
+**/node_modules
+**/dist
+**/.DS_Store
+**/target
+lerna-debug.log
+.classpath
+.project
+.settings
+.sfdx
+coverage
+*.iml
+jest-report
+yarn-error.log
+.idea
+
+**/package-lock.json
+package-lock.json

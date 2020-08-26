@@ -1,0 +1,47 @@
+{
+  "license": "BSD-3-Clause",
+  "main": "dist/index.js",
+  "typings": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "start:dev": "tsdx watch",
+    "build": "tsdx build",
+    "test:unit": "tsdx test --collect-coverage",
+    "lint": "tsdx lint",
+    "prepare": "tsdx build",
+    "pub": "npm build; npm pack; npm publish -f",
+    "pack": "npm pack"
+  },
+  "dependencies": {
+    "@sfcc-core/apiconfig": "1.0.0-alpha.2",
+    "@sfcc-core/core": "1.0.0-alpha.2",
+    "apollo-server": "^2.3.3",
+    "graphql-passport": "^0.6.1",
+    "graphql-tag": "^2.10.1",
+    "graphql-tools": "^4.0.4"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "tsdx lint"
+    }
+  },
+  "name": "@sfcc-core/core-graphql",
+  "version": "1.0.0-alpha.2",
+  "description": "sfcc default core graphql",
+  "module": "dist/core-graphql.esm.js",
+  "exports": {
+    ".": {
+      "require": "./dist/index.js",
+      "default": "./dist/core-graphql.esm.js"
+    }
+  },
+  "devDependencies": {
+    "@types/jest": "^25.1.2",
+    "husky": "^4.2.3",
+    "tsdx": "^0.12.3",
+    "tslib": "^1.10.0",
+    "typescript": "^3.7.5"
+  }
+}
