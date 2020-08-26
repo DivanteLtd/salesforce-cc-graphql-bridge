@@ -1,10 +1,10 @@
-# Commerce Storefront Sample Application &middot; [![CircleCI][circleci-image]][circleci-url]
+# Salesforce Commerce Cloud GraphQL Bridge (Proof of Concept)
 
-Our storefront sample application shows how you can build amazing commerce experiences with the latest Commerce platform technologies. The sample application helps developers get started by proving out a clear path to successfully build a storefront using our latest platform technologies, such as the Salesforce Commerce API and the Salesforce Commerce Node.js SDK.
+This is a GraphQL bridge over the SFCC Shopper API. It's a part of [Vue Storefront Next SFCC integration](https://github.com/pkarw/vue-storefront/tree/next/packages/salesforce-cc-poc).
 
-The sample application shows an example implementation of some basic storefront use cases. The implementation helps development teams quickly understand how to use our latest platform technologies and begin their own journey of building commerce experiences. It contains examples for the homepage, product list page, product detail page, and cart. While this sample application demonstrates some of the Salesforce and Commerce Cloud technologies, it’s provided as a purely educational and instructional demonstration and not as a fully functional deployable reference storefront. 
+This project is based on [SFCC Sample Apps](https://github.com/SalesforceCommerceCloud/sfcc-sample-apps/). We actually removed the original frontend sample application and just kept the GraphQL API.
 
-The application back end is built on the new Salesforce Commerce API (a RESTful headless API). The front end is built with Lightning Web Components (LWC). In between, it uses GraphQL and the Salesforce Commerce Node.js SDK.  Read more about the sample application [architecture](docs/architecture.md).
+The application back end is built on the new Salesforce Commerce API (a RESTful headless API). In between, it uses GraphQL and the Salesforce Commerce Node.js SDK.  Read more about the sample application [architecture](docs/architecture.md).
 
 Have more questions? See the [Sample Application FAQ](https://developer.commercecloud.com/s/article/CommerceAPI-Sample-Application-FAQ).
 
@@ -18,10 +18,10 @@ Have more questions? See the [Sample Application FAQ](https://developer.commerce
 To set up the sample application:
 
 1. Clone the sfcc-sample-apps repository:
-`git clone git@github.com:SalesforceCommerceCloud/sfcc-sample-apps.git`
+`git clone https://github.com/DivanteLtd/salesforce-cc-graphql-bridge.git`
 
-2. Change into the `sfcc-sample-apps` folder:
-`cd sfcc-sample-apps`
+2. Change into the `salesforce-cc-graphql-bridge` folder:
+`cd salesforce-cc-graphql-bridge`
 
 3. Copy the `api.example.js` file located at `/packages/storefront-lwc/app/`, save it as `api.js`, and make sure `api.js` is added to your `.gitignore` file.
 
@@ -49,7 +49,7 @@ Note: You can obtain these values from your Account Executive (AE) or Customer S
 `yarn start:dev` (development mode) or
 `yarn start` (production mode)
 
-8. To access the application, open the browser to http://localhost:3000
+8. To access the application, open the browser to http://localhost:3001
 
 You can optionally test the sample application:
 `yarn test`

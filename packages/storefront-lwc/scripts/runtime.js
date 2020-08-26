@@ -31,7 +31,7 @@ const __dirname = path.dirname(fileURLToPath(import.meta.url));
  */
 const templateDir = path.resolve(__dirname, '..');
 const publicDir = `${templateDir}/dist/`;
-const port = process.env.PORT || 3000;
+const port = process.env.PORT || 3001;
 const mode = process.env.NODE_ENV || 'development';
 
 const users = new Map();
@@ -146,7 +146,7 @@ function validateConfig(config) {
     const server = sampleApp.expressApplication.listen(port, () => {
         const portToTellUser =
             process.env.NODE_ENV === 'development'
-                ? 3000
+                ? 3001
                 : server.address().port;
 
         console.log('======== Example SFRA runtime ======== ');
