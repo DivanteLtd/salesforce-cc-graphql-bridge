@@ -22,6 +22,7 @@ export const typeDef = gql`
         currency: String!
         longDescription: String!
         shortDescription: String!
+        primaryCategoryId: String
         image: String!
         images(allImages: Boolean = true, size: String = "large"): [Image!]
         variants: [Variant]
