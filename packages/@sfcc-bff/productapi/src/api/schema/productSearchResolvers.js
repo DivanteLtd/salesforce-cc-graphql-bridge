@@ -71,8 +71,6 @@ const searchProduct = async (config, query, filterParams, context) => {
             context.setSessionProperty('basketId', undefined);
         }
 
-        console.log(filterParams);
-        console.log(parameterValue);
         const searchClient = await getSearchClient(config, context, refresh);
         return searchClient.productSearch({
             parameters: parameterValue
