@@ -13,8 +13,8 @@ export const typeDef = gql`
 
     type SearchResult {
         limit: Int!
-        total: Int
-        offset: Int
+        total: Int!
+        offset: Int!
         productHits: [ProductHit]
         currentFilters: [CurrentFilter]
         refinements: [Refinement]

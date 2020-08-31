@@ -33,9 +33,9 @@ const processFilterParams = filterParams => {
         if (filter.id === 'sort') {
             filterParamQuery.sort = filter.value;
         } else if (filter.id === 'limit') {
-            filterParamQuery.limit = parseInt(filter.limit);
+            filterParamQuery.limit = parseInt(filter.value);
         } else if (filter.id === 'offset') {
-            filterParamQuery.offset = parseInt(filter.offset);
+            filterParamQuery.offset = parseInt(filter.value);
         } else {
             filterParamQuery.refine.push(`${filter.id}=${filter.value}`);
         }
@@ -71,6 +71,8 @@ const searchProduct = async (config, query, filterParams, context) => {
             context.setSessionProperty('basketId', undefined);
         }
 
+        console.log(filterParams);
+        console.log(parameterValue);
         const searchClient = await getSearchClient(config, context, refresh);
         return searchClient.productSearch({
             parameters: parameterValue

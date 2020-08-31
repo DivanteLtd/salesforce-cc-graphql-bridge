@@ -37,6 +37,5 @@ export default class SearchResult {
             };
         });
         this.sortingOptions = searchResult.sortingOptions;
-        console.log(this);
     }
 }
