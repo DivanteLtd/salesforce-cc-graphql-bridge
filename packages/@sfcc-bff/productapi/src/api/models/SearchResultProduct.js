@@ -44,6 +44,7 @@ class SearchResultProduct {
         this.name = product.productName;
         this.prices = {
             sale: product.price,
+            list: product.priceMax
         };
         this.image = new Image(product.image);
         this.colorSwatches = getColorSwatches(product.variationAttributes);
