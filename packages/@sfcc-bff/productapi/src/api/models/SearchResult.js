@@ -11,6 +11,8 @@ import SearchResultProduct from './SearchResultProduct';
 export default class SearchResult {
     constructor(searchResult, filterParams) {
         this.limit = searchResult.limit;
+        this.total = searchResult.total;
+        this.offset = searchResult.offset;
         this.productHits =
             searchResult['hits'] && searchResult['hits'].length
                 ? searchResult.hits.map(

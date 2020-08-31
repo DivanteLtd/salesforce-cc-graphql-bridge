@@ -25,11 +25,17 @@ const processFilterParams = filterParams => {
     let filterParamQuery = {
         refine: [],
         sort: '',
+        limit: 25,
+        offset: 0
     };
 
     filterParams.forEach(filter => {
         if (filter.id === 'sort') {
             filterParamQuery.sort = filter.value;
+        } else if (filter.id === 'limit') {
+            filterParamQuery.limit = parseInt(filter.limit);
+        } else if (filter.id === 'offset') {
+            filterParamQuery.offset = parseInt(filter.offset);
         } else {
             filterParamQuery.refine.push(`${filter.id}=${filter.value}`);
         }
@@ -49,6 +55,13 @@ const searchProduct = async (config, query, filterParams, context) => {
             parameterValue.refine = filters.refine;
         }
 
+        if (filters.limit) {
+            parameterValue.limit = filters.limit
+        }
+        if (filters.offset) {
+            parameterValue.offset = filters.offset
+        }
+
         if (filters.sort) {
             parameterValue.sort = filters.sort;
         }
@@ -60,7 +73,7 @@ const searchProduct = async (config, query, filterParams, context) => {
 
         const searchClient = await getSearchClient(config, context, refresh);
         return searchClient.productSearch({
-            parameters: parameterValue,
+            parameters: parameterValue
         });
     });
 };

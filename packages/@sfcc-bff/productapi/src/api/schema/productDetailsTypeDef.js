@@ -18,8 +18,11 @@ export const typeDef = gql`
         name: String!
         masterId: String
         price: Float!
+        priceMax: Float
         prices: Prices
         currency: String!
+        brand: String
+        manufacturerName: String
         longDescription: String!
         shortDescription: String!
         primaryCategoryId: String
@@ -29,8 +32,25 @@ export const typeDef = gql`
         variationAttributes: [VariationAttribute]
         type: ProductType
         inventory: Inventory!
+        stepQuantity: Float
+        options: [Option]
         productPromotions: [ProductPromotion]
     }
+
+    type OptionValue {
+        default: Boolean
+        id: String
+        name: String
+        price: Float
+      }    
+
+    type Option {
+        description: String
+        id: String
+        image: String
+        name: String
+        values: [OptionValue]
+    } 
 
     type Prices {
         sale: Float

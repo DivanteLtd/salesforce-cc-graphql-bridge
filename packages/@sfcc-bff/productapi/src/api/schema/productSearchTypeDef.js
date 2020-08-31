@@ -13,6 +13,8 @@ export const typeDef = gql`
 
     type SearchResult {
         limit: Int!
+        total: Int
+        offset: Int
         productHits: [ProductHit]
         currentFilters: [CurrentFilter]
         refinements: [Refinement]
@@ -28,6 +30,8 @@ export const typeDef = gql`
         productId: String!
         productName: String!
         prices: Prices
+        price: Float
+        priceMax: Float
         image: Image!
         colorSwatches: [ColorSwatch]
     }
