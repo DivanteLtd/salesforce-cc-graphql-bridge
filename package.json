@@ -1,7 +1,7 @@
 {
-  "name": "sfcc-sample-apps",
+  "name": "salesforce-cc-graphql-bridge",
   "version": "1.0.0-alpha.1",
-  "description": "Sample Talon Application with Lightning Web Components",
+  "description": "SFCC GraphQL Bridge",
   "license": "MIT",
   "private": true,
   "config": {
@@ -10,7 +10,7 @@
   },
   "scripts": {
     "build": "lerna run build --stream",
-    "build:app": "lerna run build --scope storefront-lwc --stream",
+    "build:app": "lerna run build --scope salesforce-cc-graphql-bridge --stream",
     "lint": "lerna run lint --stream",
     "lint:fix": "lerna run lint:fix --stream",
     "clean": "lerna run clean --stream",
@@ -18,19 +18,19 @@
     "test": "lerna run test:unit --stream",
     "test:watch": "lerna run test:unit:watch --stream",
     "start": "yarn start:lwc",
-    "start:dev": "lerna run start:dev --scope storefront-lwc --stream",
+    "start:dev": "lerna run start:dev --scope salesforce-cc-graphql-bridge --stream",
     "start:watch": "yarn start:lwc:watch",
     "stop": "yarn stop:lwc",
-    "start:lwc": "lerna run start --scope storefront-lwc --stream",
-    "start:lwc:watch": "lerna run start:watch --scope storefront-lwc --stream",
-    "stop:lwc": "lerna run stop --scope storefront-lwc --stream"
+    "start:lwc": "lerna run start --scope salesforce-cc-graphql-bridge --stream",
+    "start:lwc:watch": "lerna run start:watch --scope salesforce-cc-graphql-bridge --stream",
+    "stop:lwc": "lerna run stop --scope salesforce-cc-graphql-bridge --stream"
   },
   "workspaces": {
     "packages": [
       "packages/sfcc-base",
       "packages/@sfcc-core/*",
       "packages/@sfcc-bff/*",
-      "packages/storefront-lwc"
+      "packages/salesforce-cc-graphql-bridge"
     ],
     "nohoist": [
       "**/bootstrap",

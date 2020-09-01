@@ -52,14 +52,6 @@ class SampleApp {
 
     start() {
         let myapp = this;
-        if (this.expressApplication) {
-            this.expressApplication.get('/apiconfig.js', function(req, res) {
-                res.send(
-                    `window.apiconfig={"COMMERCE_API_PATH": "${myapp.apiConfig.config.COMMERCE_API_PATH}"}`,
-                );
-            });
-        }
-
         //
         // Start Apollo/GraphQL and register Apollo with Express Middleware
         //
@@ -70,15 +62,6 @@ class SampleApp {
 
     // Just some development output
     status() {
-        this.logger.debug(
-            'Is Express Registered?',
-            !!core.getService(EXPRESS_KEY),
-        );
-        this.logger.debug(
-            'Is GraphQL Registered?',
-            !!core.getService(CORE_GRAPHQL_KEY),
-        );
-
         Object.getOwnPropertySymbols(core.services).forEach(key => {
             this.logger.debug(`Registered Core Service: ${key.toString()}.`);
         });
@@ -93,7 +76,7 @@ class SampleApp {
     }
 }
 
-export async function getSampleApp() {
+export async function getBridgeApp() {
     let API_CONFIG_DATA = {};
     try {
         const API = await import('./api.js');
