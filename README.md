@@ -33,7 +33,7 @@ To set up the application:
 2. Change into the `salesforce-cc-graphql-bridge` folder:
 `cd salesforce-cc-graphql-bridge`
 
-3. Copy the `api.example.js` file located at `/packages/storefront-lwc/app/`, save it as `api.js`, and make sure `api.js` is added to your `.gitignore` file.
+3. Copy the `api.example.js` file located at `/packages/salesforce-cc-graphql-bridge/app/`, save it as `api.js`, and make sure `api.js` is added to your `.gitignore` file.
 
 4. In the `api.js` file, provide values for the following variables:
 <table>
@@ -73,7 +73,7 @@ We recommend Visual Studio Code inbuilt debugger to troubleshoot the code. The `
     * `WARN`
     * `ERROR`
     * `SILENT`
-* You can also change the server listening port by changing the `port` property in `sfcc-sample-apps/packages/storefront-lwc/scripts/runtime.js`.
+* You can also change the server listening port by changing the `port` property in `sfcc-sample-apps/packages/salesforce-cc-graphql-bridge/scripts/runtime.js`.
 
 ### Learn More About Supporting Technologies
 * [NodeJS](https://nodejs.org/en/docs/)
