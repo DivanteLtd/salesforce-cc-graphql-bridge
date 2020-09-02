@@ -1,6 +1,4 @@
-# Sample Application with LWC
-
-The reference app based on `LWC`, `@sfcc-core/[modules]` and `@sfcc-bff/[modules]`.
+# GraphQL Bridge Application 
 
 #### Ecom Setup
 1) Please rename `api.example.js` to `api.js` this will contain the default values if env values are not set up

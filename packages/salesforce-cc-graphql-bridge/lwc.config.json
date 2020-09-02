@@ -1,7 +1,0 @@
-{
-    "modules": [
-        {
-            "npm": "@lwce/router"
-        }
-    ]
-}
