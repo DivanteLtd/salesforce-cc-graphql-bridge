@@ -2,11 +2,21 @@
 
 This is a GraphQL bridge over the SFCC Shopper API. It's a part of [Vue Storefront Next SFCC integration](https://github.com/pkarw/vue-storefront/tree/next/packages/salesforce-cc-poc).
 
-This project is based on [SFCC Sample Apps](https://github.com/SalesforceCommerceCloud/sfcc-sample-apps/). We actually removed the original frontend sample application and just kept the GraphQL API.
+Implementing the headless Salesforce Commerce Cloud application you need a gateway over SFCC API. It might be provided via [Mulesoft](https://www.mulesoft.com/) gateway or ... actually by this **GraphQL Bridge**. **It's a great starting point for adding your own data endpoints**.
 
-The application back end is built on the new Salesforce Commerce API (a RESTful headless API). In between, it uses GraphQL and the Salesforce Commerce Node.js SDK.  Read more about the sample application [architecture](docs/architecture.md).
+The application back end is built on the new Salesforce Commerce API (a RESTful headless API). It uses GraphQL and the Salesforce Commerce Node.js SDK.  Read more about the  application [architecture](docs/architecture.md).
 
-Have more questions? See the [Sample Application FAQ](https://developer.commercecloud.com/s/article/CommerceAPI-Sample-Application-FAQ).
+![productSearch endpoint example](docs/productSearch.png)
+
+![product endpoint example](docs/product.png)
+
+## The project history
+
+This project is based on [SFCC Sample Apps](https://github.com/SalesforceCommerceCloud/sfcc-sample-apps/). We removed the original frontend sample application and just kept the GraphQL API. 
+
+We took the original sample application and extended it by adding:
+- category listing,
+- additional product details,
 
 ## Prerequisites
 1. Download and install [Node.js v12](https://nodejs.org/en/download/).
@@ -15,9 +25,9 @@ Have more questions? See the [Sample Application FAQ](https://developer.commerce
 
 ## Setup
 
-To set up the sample application:
+To set up the application:
 
-1. Clone the sfcc-sample-apps repository:
+1. Clone the `salesforce-cc-graphql-bridge` repository:
 `git clone https://github.com/DivanteLtd/salesforce-cc-graphql-bridge.git`
 
 2. Change into the `salesforce-cc-graphql-bridge` folder:
@@ -49,10 +59,7 @@ Note: You can obtain these values from your Account Executive (AE) or Customer S
 `yarn start:dev` (development mode) or
 `yarn start` (production mode)
 
-8. To access the application, open the browser to http://localhost:3001
-
-You can optionally test the sample application:
-`yarn test`
+8. To access the GraphQL Playground, open the browser to http://localhost:3001/api
 
 ## Debug
 
@@ -74,24 +81,10 @@ We recommend Visual Studio Code inbuilt debugger to troubleshoot the code. The `
 * [Sass](https://sass-lang.com/guide)
 * [GraphQL](https://graphql.org/learn/)
 * [Apollo](https://www.apollographql.com/docs/tutorial/introduction/)
-* [Lightning Web Components](https://lwc.dev/)
 * [Jest](https://jestjs.io/docs/en/getting-started)
 * [Visual Studio Code](https://code.visualstudio.com/docs)
-
-## Library of Components
-The sample app currently includes the following components:
-* [Home Page](https://github.com/SalesforceCommerceCloud/sfcc-sample-apps/tree/master/packages/storefront-lwc/src/modules/commerce/home)
-* [Product Detail](https://github.com/SalesforceCommerceCloud/sfcc-sample-apps/tree/master/packages/storefront-lwc/src/modules/commerce/productDetail)
-* [Product Search Results](https://github.com/SalesforceCommerceCloud/sfcc-sample-apps/tree/master/packages/storefront-lwc/src/modules/commerce/productSearchResults)
-* [Basket](https://github.com/SalesforceCommerceCloud/sfcc-sample-apps/tree/master/packages/storefront-lwc/src/modules/commerce/basket)
 
 
 ## Contributing
 
-Note: As of 06/30/20, the integration branch has been removed from the sfcc-sample-apps repository. We recommend that you delete your local integration branch, if you have one.
-
 * See [Contributing](CONTRIBUTING.md)
-
-<!-- Markdown link & img dfn's -->
-[circleci-image]: https://circleci.com/gh/SalesforceCommerceCloud/sfcc-sample-apps.svg?style=shield&circle-token=f34a55a59d7dfc30402e719996edf10092780b66
-[circleci-url]: https://circleci.com/gh/SalesforceCommerceCloud/sfcc-sample-apps

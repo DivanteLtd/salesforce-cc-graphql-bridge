@@ -6,18 +6,16 @@
 
 - [What to Expect](#What-to-Expect)
 
-- [Team Members](#sfcc-sample-apps-Team-Members)
-
 - [Back to README](./README.md)
 
-# Contributing to sfcc-sample-apps
+# Contributing to salesforce-cc-graphql-bridge
 
-To contribute to sfcc-sample-apps, follow the guidelines below. This helps us address your pull request in a more timely manner. 
+To contribute to `salesforce-cc-graphql-bridge`, follow the guidelines below. This helps us address your pull request in a more timely manner. 
 
 ## Submitting Your First Pull Request
 If this is your first pull request:
 
-  1. Create a fork of the sfcc-sample-apps repository 
+  1. Create a fork of the `salesforce-cc-graphql-bridge` repository 
 
   2. Download the forked repository
 
@@ -44,7 +42,7 @@ If this is your first pull request:
    
        * Error logs
    
-  3. Grant sfcc-sample-apps team members access to your fork so we can run an automated test on your pull request prior to merging it into our master branch.
+  3. Grant `salesforce-cc-graphql-bridge` team members access to your fork so we can run an automated test on your pull request prior to merging it into our master branch.
 
        * From within your forked repository, find the 'Settings' link (see the site navigation on left of the page).
    
@@ -58,8 +56,7 @@ If this is your first pull request:
 
        * Lint your code:  
          `yarn lint` 	 
-       * Run and pass the unit test:  
-         `yarn test`
+
   6. Monitor your pull requests.
        
        * Please respond in a timely manner to any comments or questions about your requested changes.
@@ -78,12 +75,6 @@ As long as your submission has met the above guidelines, we should merge it in a
 
 Our sprints run for about two weeks. In that period of time, we typically review all pull requests, give feedback, and merge the requests (depending on our current sprint priorities).
 
-## sfcc-sample-apps Team Members 
-
-To speed up the process of reviewing and merging your pull request, grant the following team members access to your fork:
-
-  * SFRA Admins 
-  
  
 ## Contributer License Agreement (CLA)
 

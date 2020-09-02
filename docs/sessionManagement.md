@@ -75,7 +75,7 @@ passport.use(
 );
 ```
 
-In Sample App’s authentication configuration, the shopper token is retrieved from the Commerce SDK. From this token, the anonymous user customer ID is determined. If authentication is successful, a user is returned containing the id and the bearer token. Following successful authentication, the `getUserFromContext()` function calls `context.login()` -- which invokes `passport.serializeUser`:
+In sample authentication configuration, the shopper token is retrieved from the Commerce SDK. From this token, the anonymous user customer ID is determined. If authentication is successful, a user is returned containing the id and the bearer token. Following successful authentication, the `getUserFromContext()` function calls `context.login()` -- which invokes `passport.serializeUser`:
 
 ```typescript
 passport.serializeUser(function(user, done) {
