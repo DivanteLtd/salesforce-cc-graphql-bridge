@@ -77,18 +77,25 @@ class SampleApp {
 }
 
 export async function getBridgeApp() {
-    let API_CONFIG_DATA = {};
+    let API_CONFIG_DATA = {
+        COMMERCE_API_PATH: process.env.COMMERCE_API_PATH,
+        COMMERCE_CLIENT_API_SITE_ID: process.env.COMMERCE_CLIENT_API_SITE_ID,
+        COMMERCE_CLIENT_CLIENT_ID: process.env.COMMERCE_CLIENT_CLIENT_ID,
+        COMMERCE_CLIENT_REALM_ID: process.env.COMMERCE_CLIENT_REALM_ID,
+        COMMERCE_CLIENT_INSTANCE_ID: process.env.COMMERCE_CLIENT_INSTANCE_ID,
+        COMMERCE_CLIENT_ORGANIZATION_ID: process.env.COMMERCE_CLIENT_ORGANIZATION_ID,
+        COMMERCE_CLIENT_SHORT_CODE: process.env.COMMERCE_CLIENT_SHORT_CODE,
+        COMMERCE_LOG_LEVEL: process.env.COMMERCE_LOG_LEVEL,
+        COMMERCE_SESSION_SECRET: process.env.COMMERCE_SESSION_SECRET
+    };
     try {
         const API = await import('./api.js');
         API_CONFIG_DATA = API.default;
     } catch (e) {
-        if (process.env.NODE_ENV === 'development') {
-            console.error(
-                'WARNING: There is no api.js found! Copy the api.example.js in api.js and customize with your own variables'
-                    .red,
-            );
-            process.exit(1);
-        }
+        console.warn(
+            "WARNING: There is no api.js found! Copy the api.example.js in api.js and customize with your own variables - otherwise use the process.env variables: \nCOMMERCE_API_PATH,\nCOMMERCE_CLIENT_API_SITE_ID,\nCOMMERCE_CLIENT_CLIENT_ID,\nCOMMERCE_CLIENT_REALM_ID,\nCOMMERCE_CLIENT_INSTANCE_ID,\nCOMMERCE_CLIENT_ORGANIZATION_ID,\nCOMMERCE_CLIENT_SHORT_CODE,\nCOMMERCE_LOG_LEVEL,\nCOMMERCE_SESSION_SECRET,".yellow,
+        );
     }
     return new SampleApp(API_CONFIG_DATA);
 }
+
